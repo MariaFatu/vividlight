@@ -93,7 +93,7 @@ const SectionA = () => {
 
       <div ref={parallaxRef} className="parallax-background">
         <img 
-          src="/mountain-background.jpg" 
+          src={`${import.meta.env.BASE_URL}mountain-background.jpg`}
           alt="Mountain Background" 
           className="background-image"
         />
