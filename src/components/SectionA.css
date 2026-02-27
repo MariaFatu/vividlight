@@ -1,0 +1,273 @@
+.section-a {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  overflow: visible;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 10;
+  margin-bottom: -50vh;
+}
+
+.site-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 28px 40px;
+  pointer-events: all;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(30, 30, 30, 0.45);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: rgba(30, 30, 30, 0.75);
+}
+
+.nav-divider {
+  color: rgba(30, 30, 30, 0.25);
+  font-size: 16px;
+  user-select: none;
+}
+
+.brand-container-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.brand-heading-top {
+  font-size: clamp(64px, 13vw, 200px);
+  font-weight: 700;
+  color: #1a3d2e;
+  text-align: center;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  font-family: "Argent CF", serif;
+  opacity: 0;
+  margin-top: -60vh;
+}
+
+.parallax-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+  will-change: transform;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: bottom center;
+  transform: scaleX(-1);
+  display: block;
+}
+
+.circular-text-container {
+  position: absolute;
+  left: -600px;
+  top: 20vh;
+  width: 800px;
+  height: 800px;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.circular-text-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.circular-text {
+  fill: rgba(220, 230, 220, 1);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: "Argent CF", serif;
+}
+
+/* ── Tablet landscape ───────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .section-a {
+    height: 140vh;
+    margin-bottom: -48vh;
+  }
+
+  .brand-container-top {
+    height: 140vh;
+  }
+
+  .brand-heading-top {
+    font-size: clamp(60px, 11vw, 160px);
+    margin-top: -58vh;
+  }
+
+  .circular-text-container {
+    width: 720px;
+    height: 720px;
+    left: -540px;
+    top: 18vh;
+  }
+}
+
+/* ── Tablet portrait ────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .section-a {
+    height: 130vh;
+    margin-bottom: -42vh;
+  }
+
+  .brand-container-top {
+    height: 130vh;
+  }
+
+  .brand-heading-top {
+    font-size: clamp(56px, 10vw, 130px);
+    margin-top: -55vh;
+  }
+
+  .site-nav {
+    padding: 22px 32px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .circular-text-container {
+    width: 640px;
+    height: 640px;
+    left: -480px;
+    top: 16vh;
+  }
+}
+
+/* ── Mobile large ───────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section-a {
+    height: 115vh;
+    margin-bottom: -32vh;
+  }
+
+  .brand-container-top {
+    height: 115vh;
+  }
+
+  .brand-heading-top {
+    font-size: clamp(44px, 9vw, 90px);
+    margin-top: -52vh;
+  }
+
+  .site-nav {
+    padding: 16px 20px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+
+  .circular-text-container {
+    width: 520px;
+    height: 520px;
+    left: -390px;
+    top: 13vh;
+  }
+
+  .circular-text {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+}
+
+/* ── Mobile ─────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .section-a {
+    height: 100vh;
+    margin-bottom: -22vh;
+  }
+
+  .brand-container-top {
+    height: 100vh;
+  }
+
+  .brand-heading-top {
+    font-size: clamp(36px, 8vw, 70px);
+    margin-top: -42vh;
+  }
+
+  .site-nav {
+    padding: 14px 16px;
+    gap: 2px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 4px 6px;
+  }
+
+  .nav-divider {
+    font-size: 13px;
+  }
+
+  .circular-text-container {
+    width: 380px;
+    height: 380px;
+    left: -290px;
+    top: 10vh;
+  }
+
+  .circular-text {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+
+/* ── Small mobile ───────────────────────────────────────────────────────── */
+@media (max-width: 360px) {
+  .brand-heading-top {
+    font-size: clamp(30px, 7.5vw, 56px);
+    margin-top: -38vh;
+  }
+
+  .circular-text-container {
+    width: 320px;
+    height: 320px;
+    left: -245px;
+  }
+}

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Argent CF";
+  src: url("https://db.onlinewebfonts.com/t/1eeab2d986186e65853217364b1bccd9.eot");
+  src: url("https://db.onlinewebfonts.com/t/1eeab2d986186e65853217364b1bccd9.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/1eeab2d986186e65853217364b1bccd9.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/1eeab2d986186e65853217364b1bccd9.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/1eeab2d986186e65853217364b1bccd9.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/1eeab2d986186e65853217364b1bccd9.svg#Argent CF") format("svg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Prevent tap highlight flash on mobile */
+  -webkit-tap-highlight-color: transparent;
+  /* Smooth momentum scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent horizontal overflow on all elements */
+img, video {
+  max-width: 100%;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

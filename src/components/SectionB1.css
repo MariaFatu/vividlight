@@ -1,0 +1,242 @@
+.section-b1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f8f8;
+  z-index: 100;
+  clip-path: inset(0 0 100% 0);
+  will-change: clip-path;
+  transform: translateZ(0);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.section-b1-content {
+  width: 100%;
+  min-height: 100%;
+  padding: 60px 80px;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.close-button {
+  position: sticky;
+  top: 20px;
+  float: right;
+  margin-bottom: -60px;
+  background: transparent;
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.close-button:hover {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.close-text {
+  font-family: sans-serif;
+}
+
+.close-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.project-title-main {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 40px 0;
+  padding-top: 20px;
+  text-align: center;
+  line-height: 1.2;
+  font-family: "Argent CF", serif;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.photo-grid-item {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-grid-item.landscape-item {
+  height: 250px;
+}
+
+.photo-grid-item.portrait-item {
+  height: 350px;
+}
+
+.photo-grid-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.photo-grid-image,
+.photo-grid-video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Tablet landscape ───────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .section-b1-content {
+    padding: 50px 60px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .photo-grid-item.landscape-item {
+    height: 220px;
+  }
+
+  .photo-grid-item.portrait-item {
+    height: 300px;
+  }
+}
+
+/* ── Tablet portrait ────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .section-b1-content {
+    padding: 44px 44px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+  }
+
+  .photo-grid-item.landscape-item {
+    height: 190px;
+  }
+
+  .photo-grid-item.portrait-item {
+    height: 270px;
+  }
+}
+
+/* ── Mobile large ───────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section-b1-content {
+    padding: 36px 24px;
+  }
+
+  .close-button {
+    top: 16px;
+    padding: 10px 18px;
+    font-size: 14px;
+    margin-bottom: -52px;
+  }
+
+  .close-icon {
+    font-size: 20px;
+  }
+
+  .project-title-main {
+    margin-bottom: 28px;
+    padding-top: 16px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .photo-grid-item.landscape-item {
+    height: 160px;
+  }
+
+  .photo-grid-item.portrait-item {
+    height: 240px;
+  }
+
+  .photo-grid-item {
+    border-radius: 8px;
+  }
+}
+
+/* ── Mobile ─────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .section-b1-content {
+    padding: 28px 16px;
+  }
+
+  .close-button {
+    top: 12px;
+    padding: 8px 16px;
+    font-size: 13px;
+    margin-bottom: -44px;
+  }
+
+  .close-icon {
+    font-size: 18px;
+  }
+
+  .project-title-main {
+    margin-bottom: 22px;
+    padding-top: 12px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .photo-grid-item.landscape-item {
+    height: 200px;
+  }
+
+  .photo-grid-item.portrait-item {
+    height: 280px;
+  }
+}
+
+/* ── Small mobile ───────────────────────────────────────────────────────── */
+@media (max-width: 360px) {
+  .section-b1-content {
+    padding: 24px 12px;
+  }
+
+  .photo-grid-item.landscape-item {
+    height: 170px;
+  }
+
+  .photo-grid-item.portrait-item {
+    height: 240px;
+  }
+}
