@@ -4,12 +4,16 @@
   position: absolute;
   top: 0;
   left: 0;
+  /* Allow both axes so horizontal drag works inside the gallery */
+  touch-action: pan-x pan-y;
 }
 
 .circular-gallery canvas {
   width: 100% !important;
   height: 100% !important;
   cursor: grab;
+  /* Canvas needs full touch freedom to handle drag events */
+  touch-action: none;
 }
 
 .circular-gallery canvas:active {
