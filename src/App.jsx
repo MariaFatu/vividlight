@@ -49,7 +49,6 @@ function App() {
       title: 'Sunglasses',
       image: p('projects/sunglasses/IMG_6639.JPG'),
       images: [
-        { url: p('projects/sunglasses/1771690502578942.mov'), type: 'video' },
         { url: p('projects/sunglasses/1772196161801619.MP4'), type: 'video' },
         { url: p('projects/sunglasses/1772204750639753.MOV'), type: 'video' },
         { url: p('projects/sunglasses/IMG_4414.JPG') },
