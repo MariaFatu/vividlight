@@ -21,12 +21,11 @@ const SectionB1 = ({ isOpen, projectData, onClose, onOpened }) => {
           duration: 1.1,
           ease: 'expo.out',
           onComplete: () => {
-            // Load and play videos only after animation is done
+            // Load videos after animation so they're ready to play on demand
             videoRefs.current.forEach(video => {
               if (video && video.dataset.src) {
                 video.src = video.dataset.src;
                 video.load();
-                video.play().catch(() => {});
               }
             });
             // Notify parent that section is fully open — safe to lock scroll now
@@ -127,8 +126,6 @@ const SectionB1 = ({ isOpen, projectData, onClose, onOpened }) => {
                   ref={el => videoRefs.current[index] = el}
                   data-src={item.url}
                   className="photo-grid-video"
-                  muted
-                  loop
                   playsInline
                   controls
                   preload="none"
