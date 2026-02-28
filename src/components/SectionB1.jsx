@@ -126,6 +126,7 @@ const SectionB1 = ({ isOpen, projectData, onClose, onOpened }) => {
                   ref={el => videoRefs.current[index] = el}
                   data-src={item.url}
                   className="photo-grid-video"
+                  muted
                   playsInline
                   controls
                   preload="none"
